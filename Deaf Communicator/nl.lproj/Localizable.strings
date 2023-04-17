@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  Deaf Communicator
+
+  Created by Alex Demerjian on 7/1/22.
+  
+*/
+
+"Welcome Message Text One" = "Welkom bij Doven Communiceren!";
+"Welcome Message Text Two" = "Om te communiceren, tikt u op de knop in de linkerbovenhoek en selecteert u het 'Tekstbord' in de zijbalk.";
+"Resources Side Bar" = "Middelen";
+"Text Board Nav Link" = "Tekstbord";
+"Past Statements Nav Link" = "Eerdere verklaringen";
+"Settings Nav Link" = "Instellingen";
+"Feedback Nav Link" = "Feedback";
+"Instruction Message One" = "Om te beginnen tikt u op het grijze vlak hieronder en vervolgens op de microfoonknop op het toetsenbord.";
+"Navigation Title One" = "Tekstbord";
+"Text Copied Notification" = "(Tekst Gekopieerd!)";
+"Past Statements View Instructions" = "Tik hieronder op een eerdere uitspraak om deze terug in het tekstbord te plaatsen.";
+"Navigation Title Four" = "Eerdere Verklaringen";
+"No Past Statements Message" = "Er zijn nog geen uitspraken verwijderd.";
+"Navigation Title Two" = "Instellingen";
+"Settings Font Text One" = "Lettertypegrootte";
+"Settings Font Text Two" = "(Huidige lettergrootte:";
+"Settings Font Text Three" = "Tekstinstellingen opnieuw instellen";
+"Settings Font Style One" = "Lettertype Stijl";
+"Settings Font Style Two" = "Selecteer een letterstijl";
+"Settings Font Style Three" = "Tekstvoorbeeld";
+"Settings Font Color One" = "Letterkleur";
+"Settings Font Color Two" = "Aangepaste kleur";
+"Settings Font Color Three" = "Selecteer een letterkleur";
+"Navigation Title Three" = "Feedback";
+"Feedback Text One" = "Heeft u een verzoek of een vraag?";
+"Feedback Text Two" = "Stuur het naar alxdemer@icloud.com";
+"Privacy Policy Text One" = "Door deze app te gebruiken, gaat u akkoord met het privacybeleid van Deaf Communicate en DemeraX Software.";
+"Privacy Policy Text Two" = "Privacybeleid bekijken";
+"Recognition Text" = "DemeraX Software en zijn activa zijn ontworpen, ontwikkeld en eigendom van Alexander Demerjian";
+"Support Text One" = "Problemen hebben?";
+"Support Text Two" = "Bezoek het ondersteuningsdocument van Deaf Communicate";
+
