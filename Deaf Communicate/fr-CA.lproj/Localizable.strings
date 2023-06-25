@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  Deaf Communicate
+
+  Created by Alex Demerjian on 7/1/22.
+  
+*/
+
+"Welcome Message Text One" = "Bienvenue sur Deaf Communicate !";
+"Welcome Message Text Two" = "Pour communiquer, appuyez sur le bouton dans le coin supérieur gauche et sélectionnez le 'Tableau de texte' dans la barre latérale.";
+"Resources Side Bar" = "Ressources";
+"Text Board Nav Link" = "Tableau des Textes";
+"Past Statements Nav Link" = "Déclarations Passées";
+"Settings Nav Link" = "Réglages";
+"Feedback Nav Link" = "Retour d'information";
+"Instruction Message One" = "Pour commencer, appuyez sur la zone grise ci-dessous et ensuite sur le bouton du microphone sur le clavier.";
+"Navigation Title One" = "Tableau des Textes";
+"Text Copied Notification" = "(Texte copié)";
+"Past Statements View Instructions" = "Tapez sur une déclaration passée ci-dessous pour la remettre dans le tableau de texte.";
+"Navigation Title Four" = "Déclarations passées";
+"No Past Statements Alert Title" = "Aucune déclarations précédente";
+"No Past Statements Alert Message" = "Aucune déclaration n'a encore été supprimée de la table de texte.";
+"Navigation Title Two" = "Réglages";
+"Settings Font Text One" = "Taille de la police";
+"Settings Font Text Two" = "(Taille de police actuelle : ";
+"Settings Font Text Three" = "Réinitialiser les paramètres du texte";
+"Settings Font Style One" = "Le Style de Police";
+"Settings Font Style Two" = "Sélectionnez un Style de Police";
+"Settings Font Style Three" = "Aperçu du Texte";
+"Settings Font Color One" = "Couleur de la police";
+"Settings Font Color Two" = "Couleur personnalisée";
+"Settings Font Color Three" = "Sélectionnez une couleur de police";
+"Navigation Title Three" = "Retour d'information";
+"Feedback Text One" = "Vous avez une demande ou une question ?";
+"Feedback Text Two" = "Veuillez l'envoyer à alxdemer@icloud.com";
+"Privacy Policy Text One" = "En utilisant cette application, vous acceptez la politique de confidentialité de Deaf Communicate et DemeraX Software.";
+"Privacy Policy Text Two" = "Afficher la politique de confidentialité";
+"Recognition Text" = "DemeraX Software et ses actifs sont conçus, développés et détenus par Alexander Demerjian";
+"Support Text One" = "Avoir des Problèmes?";
+"Support Text Two" = "Visitez le document d'assistance de Deaf Communicate";

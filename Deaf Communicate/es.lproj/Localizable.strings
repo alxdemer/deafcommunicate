@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  Deaf Communicate
+
+  Created by Alex Demerjian on 7/1/22.
+  
+*/
+
+"Welcome Message Text One" = "Bienvenido a sordo comunicar!";
+"Welcome Message Text Two" = "Para comunicarse, toque el botón en la esquina superior izquierda y seleccione el 'Tablero de texto' en la barra lateral.";
+"Resources Side Bar" = "Recursos";
+"Text Board Nav Link" = "Tablero de Texto";
+"Past Statements Nav Link" = "Declaraciones Pasadas";
+"Settings Nav Link" = "Ajustes";
+"Feedback Nav Link" = "Retroalimentación";
+"Instruction Message One" = "Para empezar, toca la zona gris de abajo y luego toca el botón del micrófono en el teclado.";
+"Navigation Title One" = "Tablero de Texto";
+"Text Copied Notification" = "(Texto Copiado)";
+"Past Statements View Instructions" = "Pulse sobre un enunciado pasado para volver a ponerlo en el tablero de texto.";
+"Navigation Title Four" = "Declaraciones Anteriores";
+"No Past Statements Alert Title" = "Sin declaraciones pasadas";
+"No Past Statements Alert Message" = "Todavía no se han eliminado declaraciones del Tablero de texto.";
+"Navigation Title Two" = "Ajustes";
+"Settings Font Text One" = "Tamaño de Fuente";
+"Settings Font Text Two" = "(Tamaño de fuente actual:";
+"Settings Font Text Three" = "Restablecer la configuración del texto";
+"Settings Font Style One" = "Estilo de Fuente";
+"Settings Font Style Two" = "Seleccione un Estilo de Fuente";
+"Settings Font Style Three" = "Vista Previa de Texto";
+"Settings Font Color One" = "Color de Fuente";
+"Settings Font Color Two" = "Color Personalizado";
+"Settings Font Color Three" = "Seleccione un color de fuente";
+"Navigation Title Three" = "Retroalimentación";
+"Feedback Text One" = "¿Tiene una petición o una pregunta?";
+"Feedback Text Two" = "Envíela a alxdemer@icloud.com";
+"Privacy Policy Text One" = "Al usar esta aplicación, usted acepta la Política de privacidad de Deaf Communicate y DemeraX Software.";
+"Privacy Policy Text Two" = "Ver Política de Privacidad";
+"Recognition Text" = "DemeraX Software y sus activos están diseñados, desarrollados y son propiedad de Alexander Demerjian";
+"Support Text One" = "¿Teniendo Problemas?";
+"Support Text Two" = "Visite el documento de soporte de Deaf Communicate";
+

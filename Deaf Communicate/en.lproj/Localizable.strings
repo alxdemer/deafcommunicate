@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  Deaf Communicate
+
+  Created by Alex Demerjian on 7/1/22.
+  
+*/
+
+"Welcome Message Text One" = "Welcome to Deaf Communicate!";
+"Welcome Message Text Two" = "To communicate, tap the button in the top left corner and select the 'Text Board' in the sidebar.";
+"Resources Side Bar" = "Resources";
+"Text Board Nav Link" = "Text Board";
+"Past Statements Nav Link" = "Past Statements";
+"Settings Nav Link" = "Settings";
+"Feedback Nav Link" = "Feedback";
+"Instruction Message One" = "To begin, tap the grey area below & then tap the microphone button on the keyboard.";
+"Navigation Title One" = "Text Board";
+"Text Copied Notification" = "(Text Copied)";
+"Past Statements View Instructions" = "Tap on a past statement below to put it back in the text board.";
+"Navigation Title Four" = "Past Statements";
+"No Past Statements Alert Title" = "No Past Statements";
+"No Past Statements Alert Message" = "No statements have been deleted from the Text Board yet.";
+"Navigation Title Two" = "Settings";
+"Settings Font Text One" = "Font Size";
+"Settings Font Text Two" = "(Current font size: ";
+"Settings Font Text Three" = "Reset Text Settings";
+"Settings Font Style One" = "Font Style";
+"Settings Font Style Two" = "Select a font style";
+"Settings Font Style Three" = "Text Preview";
+"Settings Font Color One" = "Font Color";
+"Settings Font Color Two" = "Custom Color";
+"Settings Font Color Three" = "Select a font color";
+"Navigation Title Three" = "Feedback";
+"Feedback Text One" = "Have a request or a question?";
+"Feedback Text Two" = "Please send it to alxdemer@icloud.com";
+"Privacy Policy Text One" = "By using this app, you agree to Deaf Communicate's and DemeraX Software's Privacy Policy.";
+"Privacy Policy Text Two" = "View Privacy Policy";
+"Recognition Text" = "DemeraX Software and its assets are designed, developed, and owned by Alexander Demerjian";
+"Support Text One" = "Having Trouble?";
+"Support Text Two" = "Visit Deaf Communicate's Support Document";
+

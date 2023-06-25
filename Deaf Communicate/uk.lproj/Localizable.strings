@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  Deaf Communicate
+
+  Created by Alex Demerjian on 7/1/22.
+  
+*/
+
+"Welcome Message Text One" = "Ласкаво просимо до Deaf Communicate!";
+"Welcome Message Text Two" = "Щоб спілкуватися, натисніть кнопку у верхньому лівому куті та виберіть «Текстова дошка» на бічній панелі.";
+"Resources Side Bar" = "Ресурси";
+"Text Board Nav Link" = "Текстова дошка";
+"Past Statements Nav Link" = "Минулі заяви";
+"Settings Nav Link" = "Налаштування";
+"Feedback Nav Link" = "Зворотній зв'язок";
+"Instruction Message One" = "Щоб почати, торкніться сірої області нижче, а потім торкніться кнопки мікрофона на клавіатурі.";
+"Navigation Title One" = "Текстова дошка";
+"Text Copied Notification" = "(Текст скопійовано!)";
+"Past Statements View Instructions" = "Торкніться попереднього твердження нижче, щоб повернути його на дошці тексту.";
+"Navigation Title Four" = "Минулі заяви";
+"No Past Statements Alert Title" = "Немає минулих заяв";
+"No Past Statements Alert Message" = "Жодне твердження ще не видалено з текстової дошки.";
+"Navigation Title Two" = "Налаштування";
+"Settings Font Text One" = "Розмір шрифту";
+"Settings Font Text Two" = "(Поточний розмір шрифту: ";
+"Settings Font Text Three" = "Скидання налаштувань тексту";
+"Settings Font Style One" = "Стиль шрифту";
+"Settings Font Style Two" = "Виберіть стиль шрифту";
+"Settings Font Style Three" = "Попередній перегляд тексту";
+"Settings Font Color One" = "Колір шрифту";
+"Settings Font Color Two" = "Власний колір";
+"Settings Font Color Three" = "Виберіть колір шрифту";
+"Navigation Title Three" = "Зворотній зв'язок";
+"Feedback Text One" = "Є запит чи запитання?";
+"Feedback Text Two" = "Надішліть його на адресу alxdemer@icloud.com";
+"Privacy Policy Text One" = "Користуючись цією програмою, ви погоджуєтеся з Політикою конфіденційності Deaf Communicate і DemeraX Software.";
+"Privacy Policy Text Two" = "Переглянути політику конфіденційності";
+"Recognition Text" = "Програмне забезпечення DemeraX та його активи розроблені, розроблені та належать Alexander Demerjian";
+"Support Text One" = "Виникли проблеми?";
+"Support Text Two" = "Відвідайте документ підтримки Deaf Communicate";
+

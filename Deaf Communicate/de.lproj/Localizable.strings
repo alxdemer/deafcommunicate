@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  Deaf Communicate
+
+  Created by Alex Demerjian on 7/1/22.
+  
+*/
+
+"Welcome Message Text One" = "Willkommen bei Deaf Communicate!";
+"Welcome Message Text Two" = "Um zu kommunizieren, tippen Sie auf die Schaltfläche in der oberen linken Ecke und wählen Sie die 'Texttafel' in der Seitenleiste.";
+"Resources Side Bar" = "Ressourcen";
+"Text Board Nav Link" = "Texttafel";
+"Past Statements Nav Link" = "Vergangene Aussagen";
+"Settings Nav Link" = "Einstellungen";
+"Feedback Nav Link" = "Feedback";
+"Instruction Message One" = "Um zu beginnen, tippen Sie auf den grauen Bereich unten und dann auf die Mikrofontaste auf der Tastatur.";
+"Navigation Title One" = "Texttafel";
+"Text Copied Notification" = "(Text Kopiert)";
+"Past Statements View Instructions" = "Tippen Sie unten auf eine vergangene Aussage, um sie wieder in die Texttafel einzufügen.";
+"Navigation Title Four" = "Frühere Aussagen";
+"No Past Statements Alert Title" = "Keine früheren Aussagen";
+"No Past Statements Alert Message" = "Es wurden noch keine Aussagen aus dem Textboard gelöscht.";
+"Navigation Title Two" = "Einstellungen";
+"Settings Font Text One" = "Schriftgröße";
+"Settings Font Text Two" = "(Aktuelle Schriftgröße: ";
+"Settings Font Text Three" = "Texteinstellungen zurücksetzen";
+"Settings Font Style One" = "Schriftstil";
+"Settings Font Style Two" = "Wählen Sie einen Schriftstil aus";
+"Settings Font Style Three" = "Textvorschau";
+"Settings Font Color One" = "Schriftfarbe";
+"Settings Font Color Two" = "Benutzerdefinierte Farbe";
+"Settings Font Color Three" = "Wählen Sie eine Schriftfarbe";
+"Navigation Title Three" = "Feedback";
+"Feedback Text One" = "Haben Sie eine Anfrage oder eine Frage?";
+"Feedback Text Two" = "Bitte senden Sie es an alxdemer@icloud.com";
+"Privacy Policy Text One" = "Durch die Nutzung dieser App stimmen Sie den Datenschutzrichtlinien von Deaf Communicate und DemeraX Software zu.";
+"Privacy Policy Text Two" = "Datenschutzrichtlinie anzeigen";
+"Recognition Text" = "DemeraX Software und ihre Bestandteile werden von Alexander Demerjian entworfen, entwickelt und sind sein Eigentum.";
+"Support Text One" = "Probleme Haben?";
+"Support Text Two" = "Besuchen Sie das Support-Dokument von Deaf Communicate";
+

@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  Deaf Communicate
+
+  Created by Alex Demerjian on 7/1/22.
+  
+*/
+
+"Welcome Message Text One" = "청각 장애인 커뮤니케이션에 오신 것을 환영합니다!";
+"Welcome Message Text Two" = "통신하려면 왼쪽 상단의 버튼을 탭하고 사이드 바에서 '텍스트 보드'를 선택하십시오.";
+"Resources Side Bar" = "리소스";
+"Text Board Nav Link" = "텍스트 보드";
+"Past Statements Nav Link" = "과거 진술";
+"Settings Nav Link" = "설정";
+"Feedback Nav Link" = "피드백";
+"Instruction Message One" = "시작하려면 아래 회색 영역을 누른 다음 키보드의 마이크 버튼을 누릅니다.";
+"Navigation Title One" = "텍스트 보드";
+"Text Copied Notification" = "(텍스트 복사됨)";
+"Past Statements View Instructions" = "아래의 과거 문장을 탭하여 텍스트 보드에 다시 넣습니다.";
+"Navigation Title Four" = "과거 진술";
+"No Past Statements Alert Title" = "과거 진술 없음";
+"No Past Statements Alert Message" = "아직 텍스트 보드에서 삭제된 진술이 없습니다.";
+"Navigation Title Two" = "설정";
+"Settings Font Text One" = "글꼴 크기";
+"Settings Font Text Two" = "(현재 글꼴 크기:";
+"Settings Font Text Three" = "텍스트 설정 재설정";
+"Settings Font Style One" = "글꼴 스타일";
+"Settings Font Style Two" = "글꼴 스타일 선택";
+"Settings Font Style Three" = "텍스트 미리보기";
+"Settings Font Color One" = "글꼴 색상";
+"Settings Font Color Two" = "사용자 정의 색상";
+"Settings Font Color Three" = "글꼴 색상 선택";
+"Navigation Title Three" = "피드백";
+"Feedback Text One" = "요청이나 질문이 있으십니까?";
+"Feedback Text Two" = "alxdemer@icloud.com 에게 보내주십시오.";
+"Privacy Policy Text One" = "이 앱을 사용하면 Deaf Communicate 및 DemeraX 소프트웨어의 개인정보 보호정책에 동의하는 것입니다.";
+"Privacy Policy Text Two" = "개인정보 보호정책 보기";
+"Recognition Text" = "DemeraX Software 및 그 자산은 Alexander Demerjian이 설계, 개발 및 소유합니다.";
+"Support Text One" = "문제가있다?";
+"Support Text Two" = "Deaf Communicate 지원 문서 방문";
+
