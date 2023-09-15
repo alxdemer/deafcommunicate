@@ -1,26 +1,26 @@
 //
 //  SettingsView.swift
-//  Deaf Communicator
+//  Deaf Communicate
 //
 //  Created by Alex Demerjian on 6/26/22.
 //
 
 import SwiftUI
 
-struct SettingsView: View
-{
+struct SettingsView: View{
     
     //General variables
+    @EnvironmentObject private var deafCommunicateModel: MainViewModel
     let colors = [Color.black, Color.white, Color.blue, Color.red, Color.yellow, Color.orange, Color.green]
     let fontStyles = ["SF Pro Regular", "Times New Roman",
     "Times New Roman Bold", "Arial", "Arial Bold", "Bradley Hand Bold", "Copperplate Bold", "Chalkboard SE Regular", "Chalkboard SE Bold", "Chalkduster", "Courier", "Courier Bold", "Noteworthy Light", "Noteworthy Bold", "Optima Regular", "Optima Bold", "Papyrus", "Party LET Plain", "Rockwell", "Rockwell Bold", "Savoye LET Plain", "Symbol", "Verdana", "Verdana Bold"]
     @State var fontSize = 50.0
     @State var fontStyle = "SF Pro Regular"
-    @State var customFontColor = Color.black
-    @State var customColor = false
+    @State var isCustomFontColor = false
+    @State var fontColor = Color.black
     
     //Localized variables (for multi language support)
-    let navigationTitleTwo : LocalizedStringKey = "Navigation Title Two"
+    let settingsViewTitle : LocalizedStringKey = "Settings View Title"
     let settingsFontTextOne : LocalizedStringKey = "Settings Font Text One"
     let settingsFontTextTwo : LocalizedStringKey = "Settings Font Text Two"
     let settingsFontTextThree: LocalizedStringKey = "Settings Font Text Three"
@@ -31,67 +31,48 @@ struct SettingsView: View
     let settingsFontColorTwo : LocalizedStringKey = "Settings Font Color Two"
     let settingsFontColorThree : LocalizedStringKey = "Settings Font Color Three"
     
-    init()
-    {
+    init(){
         UITextView.appearance().backgroundColor = .clear
     }
     
-    var body: some View
-    {
-        ScrollView
-        {
-            VStack
-            {
-                if #available(iOS 16, *)
-                {
-                    Text(settingsFontStyleThree)
-                        .frame(height:100)
-                        .font(Font.custom(fontStyle, size: fontSize))
-                        .foregroundColor(customFontColor)
-                        .background(.gray.opacity(0.3))
-                        .cornerRadius(8)
-                        .padding()
-                }
-                else
-                {
-                    Text(settingsFontStyleThree)
-                        .frame(height:100)
-                        .font(Font.custom(fontStyle, size: fontSize))
-                        .foregroundColor(customFontColor)
-                        .background(Color.gray.opacity(0.3))
-                        .cornerRadius(8)
-                        .padding()
-                }
+    var body: some View{
+        
+        ScrollView{
+            
+            VStack{
                 
+                Text(settingsFontStyleThree)
+                    .frame(height:100)
+                    .font(Font.custom(fontStyle, size: fontSize))
+                    .foregroundColor(fontColor)
+                    .background(.gray.opacity(0.3))
+                    .cornerRadius(8)
+                    .padding()
                 
-                        
                 Button(action:{
                     fontSize = 50.0
                     fontStyle = "SF Pro Regular"
-                    customFontColor = Color.black
-                    customColor = false})
-                {
+                    fontColor = Color.black
+                    isCustomFontColor = false}){
+                        
                     Image(systemName: "arrow.counterclockwise")
                     Text(settingsFontTextThree)
                 }
                 .buttonStyle(.bordered)
                 
-            
-                
                 Text(settingsFontTextOne)
                     .font(.system(size:30, weight: .heavy))
                     .padding()
                 
-                HStack
-                {
+                HStack{
                     Text(settingsFontTextTwo)
                         .font(.system(size:20))
-                    Text("\(fontSize, specifier: "%.1f"))")
+                    Text("\(fontSize, specifier: "%.0f"))")
                         .font(.system(size:20))
                 }
                 
-                HStack
-                {
+                HStack{
+                    
                     Image(systemName: "minus")
                     Slider(value:$fontSize, in:25...150)
                         .padding()
@@ -115,10 +96,10 @@ struct SettingsView: View
                     .padding()
                 
                 
-                Picker(settingsFontStyleTwo, selection:$fontStyle)
-                {
-                    ForEach(fontStyles, id:\.self)
-                    {
+                Picker(settingsFontStyleTwo, selection:$fontStyle){
+                    
+                    ForEach(fontStyles, id:\.self){
+                        
                         Label($0.self, systemImage: "pencil")
                     }
                 }
@@ -129,28 +110,37 @@ struct SettingsView: View
                     .fill(.gray)
                     .frame(height:2)
                 
-                VStack
-                {
+                VStack{
                     
                     Text(settingsFontColorOne)
                         .font(.system(size:30, weight: .heavy))
                         .toggleStyle(SwitchToggleStyle(tint: .blue))
                         .padding()
                     
-                    Toggle(settingsFontColorTwo, isOn: $customColor)
+                    Toggle(settingsFontColorTwo, isOn: $isCustomFontColor)
                         .padding()
                     
                 }
-                .navigationTitle(navigationTitleTwo)
+                .navigationTitle(settingsViewTitle)
             }
             
-            if customColor
-            {
-                Picker(settingsFontColorThree, selection: $customFontColor)
-                {
-                    ForEach(colors, id:\.self)
-                    {
-                        Label($0.description, systemImage: "paintbrush")
+            if isCustomFontColor{
+                
+                Picker(settingsFontColorThree, selection: $fontColor){
+                    
+                    ForEach(colors, id:\.self){
+                        
+                        color in
+                        
+                        HStack{
+                            Rectangle()
+                                .border(Color.gray, width: 2)
+                                .foregroundStyle(color)
+                                .frame(width: 20, height: 10)
+                            
+                            Text(color.description)
+                        }
+                        
                     }
                     
                 }
@@ -160,119 +150,28 @@ struct SettingsView: View
         }
         .onAppear(perform: {
             
-            if (UserDefaults.standard.object(forKey: "fontSize") == nil)
-            {
-                UserDefaults.standard.set(50.0, forKey: "fontSize")
-                fontSize = (UserDefaults.standard.object(forKey: "fontSize") as? Double)!
-            }
-            else
-            {
-                fontSize = (UserDefaults.standard.object(forKey: "fontSize") as? Double)!
-            }
+            fontSize = deafCommunicateModel.fontSize
+            fontStyle = deafCommunicateModel.fontStyle
+            isCustomFontColor = deafCommunicateModel.isCustomFontColor
+            fontColor = deafCommunicateModel.fontColor
             
-            if (UserDefaults.standard.object(forKey: "fontStyle") == nil)
-            {
-                UserDefaults.standard.set("SF Pro Regular", forKey: "fontStyle")
-                fontStyle = (UserDefaults.standard.object(forKey: "fontStyle") as? String)!
-            }
-            else
-            {
-                fontStyle = (UserDefaults.standard.object(forKey: "fontStyle") as? String)!
-            }
-            
-            if (UserDefaults.standard.object(forKey: "customFontColor") == nil)
-            {
-                UserDefaults.standard.set(1, forKey: "customFontColor")
-                let colorNum = UserDefaults.standard.object(forKey: "customFontColor") as? Int
-                customFontColor = determineColor(colorNum: colorNum!)
-            }
-            else
-            {
-                let colorNum = UserDefaults.standard.object(forKey: "customFontColor") as? Int
-                customFontColor = determineColor(colorNum: colorNum!)
-            }
-            
-            if (UserDefaults.standard.object(forKey: "customColor") == nil)
-            {
-                UserDefaults.standard.set(false, forKey: "customColor")
-                customColor = (UserDefaults.standard.object(forKey: "customColor") as? Bool)!
-            }
-            else
-            {
-                customColor = (UserDefaults.standard.object(forKey: "customColor") as? Bool)!
-            }
         })
         .onDisappear(perform: {
+            
+            //update user defaults
             UserDefaults.standard.set(fontSize, forKey: "fontSize")
             UserDefaults.standard.set(fontStyle, forKey: "fontStyle")
-            UserDefaults.standard.set(determineNum(color: customFontColor), forKey: "customFontColor")
-            UserDefaults.standard.set(customColor, forKey: "customColor")
+            UserDefaults.standard.set(isCustomFontColor, forKey: "isCustomFontColor")
+            UserDefaults.standard.set(fontColor.determineInt(), forKey: "fontColorInt")
+            
+            //update current text settings
+            deafCommunicateModel.fontSize = fontSize
+            deafCommunicateModel.fontStyle = fontStyle
+            deafCommunicateModel.isCustomFontColor = isCustomFontColor
+            deafCommunicateModel.fontColor = fontColor
+            
         })
         
-    }
-    
-    func determineColor(colorNum: Int) -> Color
-    {
-        if (colorNum == 1)
-        {
-            return Color.black
-        }
-        else if (colorNum == 2)
-        {
-            return Color.white
-        }
-        else if (colorNum == 3)
-        {
-            return Color.blue
-        }
-        else if (colorNum == 4)
-        {
-            return Color.red
-        }
-        else if (colorNum == 5)
-        {
-            return Color.yellow
-        }
-        else if (colorNum == 6)
-        {
-            return Color.orange
-        }
-        else
-        {
-            return Color.green
-        }
-    }
-    
-    func determineNum(color: Color) -> Int
-    {
-        if (color == Color.black)
-        {
-            return 1
-        }
-        else if (color == Color.white)
-        {
-            return 2
-        }
-        else if (color == Color.blue)
-        {
-            return 3
-        }
-        else if (color == Color.red)
-        {
-            return 4
-        }
-        else if (color == Color.yellow)
-        {
-            return 5
-        }
-        else if (color == Color.orange)
-        {
-            return 6
-        }
-        else
-        {
-            return 7
-        }
     }
     
 }

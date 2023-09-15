@@ -5,22 +5,15 @@
   Created by Alex Demerjian on 7/1/22.
   
 */
-
-"Welcome Message Text One" = "Witamy w serwisie Deaf Communicate!";
-"Welcome Message Text Two" = "Aby się porozumieć, dotknij przycisku w lewym górnym rogu i wybierz 'Tablicę tekstową' na pasku bocznym.";
-"Resources Side Bar" = "Zasoby";
-"Text Board Nav Link" = "Tablica Tekstowa";
-"Past Statements Nav Link" = "Przeszłe Oświadczenia";
-"Settings Nav Link" = "Ustawienia";
-"Feedback Nav Link" = "Informacja zwrotna";
 "Instruction Message One" = "Aby rozpocząć, dotknij szarego obszaru poniżej & następnie dotknij przycisku mikrofonu na klawiaturze.";
-"Navigation Title One" = "Tablica Tekstowa";
-"Text Copied Notification" = "(Skopiowano tekst)";
-"Past Statements View Instructions" = "Stuknij w przeszłe stwierdzenie poniżej, aby umieścić je z powrotem w tablicy tekstowej.";
-"Navigation Title Four" = "Przeszłe Oświadczenia";
-"No Past Statements Alert Title" = "Brak przeszłych oświadczeń";
-"No Past Statements Alert Message" = "Żadna wypowiedź nie została jeszcze usunięta z tablicy tekstowej.";
-"Navigation Title Two" = "Ustawienia";
+"Copy Button" = "Kopiować";
+"Delete Button" = "Usunąć";
+"Text Copied Notification" = "Skopiowano tekst";
+"Text History View Instructions" = "Stuknij tekst poniżej, aby wyświetlić go ponownie.";
+"Text History View Title" = "Historia Tekstu";
+"No Text History Alert Title" = "Brak historii tekstu";
+"No Text History Alert Message" = "Żaden tekst nie został jeszcze usunięty.";
+"Settings View Title" = "Ustawienia";
 "Settings Font Text One" = "Rozmiar Czcionki";
 "Settings Font Text Two" = "(Aktualny rozmiar czcionki:";
 "Settings Font Text Three" = "Resetuj ustawienia tekstu";
@@ -30,12 +23,11 @@
 "Settings Font Color One" = "Kolor Czcionki";
 "Settings Font Color Two" = "Kolor Niestandardowy";
 "Settings Font Color Three" = "Wybierz kolor czcionki";
-"Navigation Title Three" = "Informacja zwrotna";
+"Feedback View Title" = "Informacja zwrotna";
 "Feedback Text One" = "Masz prośbę lub pytanie?";
 "Feedback Text Two" = "Wyślij go na adres alxdemer@icloud.com";
-"Privacy Policy Text One" = "Korzystając z tej aplikacji, zgadzasz się z Polityką prywatności Deaf Communicate i DemeraX Software.";
+"Privacy Policy Text One" = "Korzystając z tej aplikacji, zgadzasz się z Polityką prywatności Deaf Communicate.";
 "Privacy Policy Text Two" = "Zobacz Politykę Prywatności";
-"Recognition Text" = "Oprogramowanie DemeraX i jego aktywa zostały zaprojektowane, opracowane i należą do Alexandra Demerjiana.";
 "Support Text One" = "Mieć Problemy?";
 "Support Text Two" = "Odwiedź dokument wsparcia Deaf Communicate";
 

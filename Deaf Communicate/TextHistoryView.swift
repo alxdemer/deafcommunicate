@@ -1,35 +1,38 @@
 //
-//  StatementHistoryView.swift
-//  Deaf Communicator
+//  HistoryView.swift
+//  Deaf Communicate
 //
 //  Created by Alex Demerjian on 6/26/22.
 //
 
 import SwiftUI
 
-struct PastStatementsView: View
-{
+struct TextHistoryView: View{
+    
     //General variables
-    @EnvironmentObject private var deafCommunicateModel: DeafCommunicateModel
-    @Environment(\.dismiss) private var dismiss
-    @State var showNoPastStatementsAlert = false
+    @Binding var showHistorySheet: Bool
+    @EnvironmentObject private var deafCommunicateModel: MainViewModel
+    //@Environment(\.dismiss) private var dismiss
+    @State var showNoTextHistoryAlert = false
     
     //Localized variables (for multi language support)
-    let pastStatementsViewInstructions : LocalizedStringKey = "Past Statements View Instructions"
-    let navigationTitleFour : LocalizedStringKey = "Navigation Title Four"
+    let textHistoryViewTitle : LocalizedStringKey = "Text History View Title"
+    let textHistoryViewInstructions : LocalizedStringKey = "Text History View Instructions"
+    let noTextHistoryAlertTitle: LocalizedStringKey = "No Text History Alert Title"
+    let noTextHistoryAlertMessage: LocalizedStringKey = "No Text History Alert Message"
     
-    let noPastStatementsAlertTitle: LocalizedStringKey = "No Past Statements Alert Title"
-    let noPastStatementsAlertMessage: LocalizedStringKey = "No Past Statements Alert Message"
-    
-        
     var body: some View{
         
         VStack{
             
             if !(deafCommunicateModel.statementHistory.isEmpty){
                 
+                Text(textHistoryViewTitle)
+                    .font(.title3)
+                    .bold()
+                    .padding()
                 
-                Text(pastStatementsViewInstructions)
+                Text(textHistoryViewInstructions)
                     .font(.system(size:20))
                     .multilineTextAlignment(.center)
                     .padding()
@@ -43,6 +46,7 @@ struct PastStatementsView: View
                         Button(){
                             
                             deafCommunicateModel.statement = pastStatement
+                            showHistorySheet = false
                         }
                         label:{
                             
@@ -51,16 +55,15 @@ struct PastStatementsView: View
                         
                     }
                 }
-                .navigationTitle(navigationTitleFour)
                 .listStyle(DefaultListStyle())
             }
                 
         }
-        .alert(noPastStatementsAlertTitle, isPresented: $showNoPastStatementsAlert, actions: {
+        .alert(noTextHistoryAlertTitle, isPresented: $showNoTextHistoryAlert, actions: {
             
             Button(action: {
                 
-                dismiss()
+                showHistorySheet = false
                 
             }, label: {
                 
@@ -69,27 +72,21 @@ struct PastStatementsView: View
             
         }, message: {
             
-            Text(noPastStatementsAlertMessage)
+            Text(noTextHistoryAlertMessage)
             
         })
         .onAppear{
             
             if deafCommunicateModel.statementHistory.count == 0{
                 
-                showNoPastStatementsAlert = true
+                showNoTextHistoryAlert = true
                 
             }else{
+                showNoTextHistoryAlert = false
                 
-                showNoPastStatementsAlert = false
             }
             
         }
     }
     
-}
-
-struct PastStatementsView_Previews: PreviewProvider {
-    static var previews: some View {
-        PastStatementsView()
-    }
 }

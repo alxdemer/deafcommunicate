@@ -1,20 +1,20 @@
 //
 //  FeedbackView.swift
-//  Deaf Communicator
+//  Deaf Communicate
 //
 //  Created by Alex Demerjian on 7/9/22.
 //
 
 import SwiftUI
 
-struct FeedbackView: View
-{
+struct FeedbackView: View{
+    
     //General variables
     private let privacyPolicy = URL(string:"https://www.freeprivacypolicy.com/live/c7942d84-a4c8-4a3b-b9a9-57573269459d")!
     private let supportDoc = URL(string:"https://docs.google.com/document/d/1RDXhsm-Vx-5QgsBHx27UUlPXnfyekYKgB7kEtLblntk/edit?usp=sharing")!
     
     //Localized variables (for multi language support)
-    let navigationTitleThree : LocalizedStringKey = "Navigation Title Three"
+    let feedbackViewTitle : LocalizedStringKey = "Feedback View Title"
     let feedbackTextOne : LocalizedStringKey = "Feedback Text One"
     let feedbackTextTwo : LocalizedStringKey = "Feedback Text Two"
     let privacyPolicyTextOne : LocalizedStringKey = "Privacy Policy Text One"
@@ -23,10 +23,10 @@ struct FeedbackView: View
     let supportTextOne : LocalizedStringKey = "Support Text One"
     let supportTextTwo : LocalizedStringKey = "Support Text Two"
     
-    var body: some View
-    {
-        ScrollView
-        {
+    var body: some View{
+        
+        ScrollView{
+            
             Text(supportTextOne)
                 .font(.system(size:25, weight: .heavy))
                 .padding()
@@ -39,8 +39,7 @@ struct FeedbackView: View
                 .frame(height:2)
                 .padding()
             
-            VStack
-            {
+            VStack{
                 Text(feedbackTextOne)
                     .font(.system(size:25, weight: .heavy))
                 
@@ -60,21 +59,9 @@ struct FeedbackView: View
             Link(privacyPolicyTextTwo, destination: privacyPolicy)
                 .padding()
             
+            Text("© 2023 Alexander Demerjian")
             
-            Text("© 2023 Grex LLC")
-            
-            Text(recognitionText)
-                .foregroundColor(Color.gray)
-                .multilineTextAlignment(.center)
-                .navigationTitle(navigationTitleThree)
-                .padding()
         }
         
-    }
-}
-
-struct FeedbackView_Previews: PreviewProvider {
-    static var previews: some View {
-        FeedbackView()
     }
 }

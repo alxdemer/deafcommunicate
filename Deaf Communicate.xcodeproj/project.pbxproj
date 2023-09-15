@@ -7,30 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D11165C2A48C13900BE08DF /* TextBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D11165B2A48C13900BE08DF /* TextBoardViewModel.swift */; };
-		6D1A145B2A48AA0400DC0BF7 /* DeafCommunicateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1A145A2A48AA0400DC0BF7 /* DeafCommunicateModel.swift */; };
+		210FCDA02AB384AD00419C53 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210FCD9F2AB384AD00419C53 /* MainView.swift */; };
+		215242AC2AABDBB100957175 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215242AB2AABDBB100957175 /* NotificationView.swift */; };
+		215BAF3E2AAAC5E200D206BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215BAF3D2AAAC5E200D206BD /* LaunchScreen.storyboard */; };
+		6D1A145B2A48AA0400DC0BF7 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1A145A2A48AA0400DC0BF7 /* MainViewModel.swift */; };
 		6D75059329EDD4690032A710 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D75059229EDD4690032A710 /* Assets.xcassets */; };
 		6D75059629EDD4690032A710 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D75059529EDD4690032A710 /* Preview Assets.xcassets */; };
 		6D75059F29EDD5B10032A710 /* DeafCommunicateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D75059E29EDD5B10032A710 /* DeafCommunicateApp.swift */; };
-		6D7505A729EDD68D0032A710 /* PastStatementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7505A029EDD68D0032A710 /* PastStatementsView.swift */; };
+		6D7505A729EDD68D0032A710 /* TextHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7505A029EDD68D0032A710 /* TextHistoryView.swift */; };
 		6D7505A929EDD68D0032A710 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7505A229EDD68D0032A710 /* SettingsView.swift */; };
-		6D7505AB29EDD68D0032A710 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7505A429EDD68D0032A710 /* WelcomeView.swift */; };
-		6D7505AC29EDD68D0032A710 /* TextBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7505A529EDD68D0032A710 /* TextBoardView.swift */; };
 		6D7505AD29EDD68D0032A710 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7505A629EDD68D0032A710 /* FeedbackView.swift */; };
 		6D7505B229EDD87D0032A710 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D7505B029EDD87D0032A710 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6D11165B2A48C13900BE08DF /* TextBoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoardViewModel.swift; sourceTree = "<group>"; };
-		6D1A145A2A48AA0400DC0BF7 /* DeafCommunicateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeafCommunicateModel.swift; sourceTree = "<group>"; };
+		210FCD9F2AB384AD00419C53 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		215242A82AAB9B6A00957175 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		215242A92AAB9EDF00957175 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		215242AA2AABBC0F00957175 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
+		215242AB2AABDBB100957175 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		215BAF3D2AAAC5E200D206BD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6D1A145A2A48AA0400DC0BF7 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		6D75058B29EDD4680032A710 /* Deaf Communicate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deaf Communicate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D75059229EDD4690032A710 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D75059529EDD4690032A710 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6D75059E29EDD5B10032A710 /* DeafCommunicateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeafCommunicateApp.swift; sourceTree = "<group>"; };
-		6D7505A029EDD68D0032A710 /* PastStatementsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastStatementsView.swift; sourceTree = "<group>"; };
+		6D7505A029EDD68D0032A710 /* TextHistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextHistoryView.swift; sourceTree = "<group>"; };
 		6D7505A229EDD68D0032A710 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		6D7505A429EDD68D0032A710 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		6D7505A529EDD68D0032A710 /* TextBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextBoardView.swift; sourceTree = "<group>"; };
 		6D7505A629EDD68D0032A710 /* FeedbackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 		6D7505B129EDD87D0032A710 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6D7505B329EDD89F0032A710 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -75,16 +78,16 @@
 		6D75058D29EDD4680032A710 /* Deaf Communicate */ = {
 			isa = PBXGroup;
 			children = (
-				6D7505B029EDD87D0032A710 /* Localizable.strings */,
+				215242AB2AABDBB100957175 /* NotificationView.swift */,
 				6D7505A629EDD68D0032A710 /* FeedbackView.swift */,
-				6D7505A029EDD68D0032A710 /* PastStatementsView.swift */,
+				6D7505A029EDD68D0032A710 /* TextHistoryView.swift */,
 				6D7505A229EDD68D0032A710 /* SettingsView.swift */,
-				6D7505A529EDD68D0032A710 /* TextBoardView.swift */,
-				6D11165B2A48C13900BE08DF /* TextBoardViewModel.swift */,
-				6D7505A429EDD68D0032A710 /* WelcomeView.swift */,
+				210FCD9F2AB384AD00419C53 /* MainView.swift */,
+				6D1A145A2A48AA0400DC0BF7 /* MainViewModel.swift */,
 				6D75059E29EDD5B10032A710 /* DeafCommunicateApp.swift */,
-				6D1A145A2A48AA0400DC0BF7 /* DeafCommunicateModel.swift */,
+				215BAF3D2AAAC5E200D206BD /* LaunchScreen.storyboard */,
 				6D75059229EDD4690032A710 /* Assets.xcassets */,
+				6D7505B029EDD87D0032A710 /* Localizable.strings */,
 				6D75059429EDD4690032A710 /* Preview Content */,
 			);
 			path = "Deaf Communicate";
@@ -126,7 +129,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					6D75058A29EDD4680032A710 = {
 						CreatedOnToolsVersion = 14.3;
@@ -150,6 +153,9 @@
 				pl,
 				ro,
 				uk,
+				ja,
+				fr,
+				el,
 			);
 			mainGroup = 6D75058229EDD4680032A710;
 			productRefGroup = 6D75058C29EDD4680032A710 /* Products */;
@@ -168,6 +174,7 @@
 			files = (
 				6D75059629EDD4690032A710 /* Preview Assets.xcassets in Resources */,
 				6D7505B229EDD87D0032A710 /* Localizable.strings in Resources */,
+				215BAF3E2AAAC5E200D206BD /* LaunchScreen.storyboard in Resources */,
 				6D75059329EDD4690032A710 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,14 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D7505A729EDD68D0032A710 /* PastStatementsView.swift in Sources */,
-				6D7505AB29EDD68D0032A710 /* WelcomeView.swift in Sources */,
+				6D7505A729EDD68D0032A710 /* TextHistoryView.swift in Sources */,
+				210FCDA02AB384AD00419C53 /* MainView.swift in Sources */,
 				6D7505A929EDD68D0032A710 /* SettingsView.swift in Sources */,
-				6D1A145B2A48AA0400DC0BF7 /* DeafCommunicateModel.swift in Sources */,
-				6D11165C2A48C13900BE08DF /* TextBoardViewModel.swift in Sources */,
+				6D1A145B2A48AA0400DC0BF7 /* MainViewModel.swift in Sources */,
 				6D75059F29EDD5B10032A710 /* DeafCommunicateApp.swift in Sources */,
 				6D7505AD29EDD68D0032A710 /* FeedbackView.swift in Sources */,
-				6D7505AC29EDD68D0032A710 /* TextBoardView.swift in Sources */,
+				215242AC2AABDBB100957175 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +213,9 @@
 				6D7505BA29EDD9010032A710 /* pl */,
 				6D7505BB29EDD90B0032A710 /* ro */,
 				6D7505BC29EDD9130032A710 /* uk */,
+				215242A82AAB9B6A00957175 /* ja */,
+				215242A92AAB9EDF00957175 /* fr */,
+				215242AA2AABBC0F00957175 /* el */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -218,6 +227,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -250,6 +260,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -278,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -310,6 +322,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -339,11 +352,12 @@
 				DEVELOPMENT_TEAM = 225WY9GR2W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Communicate;
+				INFOPLIST_FILE = "Deaf-Communicate-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Deaf Communicate";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -351,7 +365,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.1;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "DeafCom.Deaf-Communicator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -371,11 +385,12 @@
 				DEVELOPMENT_TEAM = 225WY9GR2W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Communicate;
+				INFOPLIST_FILE = "Deaf-Communicate-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Deaf Communicate";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -383,7 +398,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.1;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "DeafCom.Deaf-Communicator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
