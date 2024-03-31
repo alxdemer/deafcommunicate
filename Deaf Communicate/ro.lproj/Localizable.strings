@@ -5,8 +5,9 @@
   Created by Alex Demerjian on 7/1/22.
   
 */
-"Instruction Message One" = "Pentru a începe, atingeți zona gri de mai jos și apoi atingeți butonul de microfon de pe tastatură.";
+"Instruction Message One" = "Pentru a începe, atingeți butonul microfon din partea de jos a ecranului.";
 "Copy Button" = "Copie";
+"Save To History Button" = "Salvați în istoric";
 "Delete Button" = "Șterge";
 "Text Copied Notification" = "Text copiat";
 "Text History View Instructions" = "Atingeți un text de mai jos pentru a-l afișa din nou.";

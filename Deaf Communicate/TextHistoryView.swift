@@ -10,8 +10,8 @@ import SwiftUI
 struct TextHistoryView: View{
     
     //General variables
-    @Binding var showHistorySheet: Bool
-    @EnvironmentObject private var deafCommunicateModel: MainViewModel
+    @Binding var showTextHistory: Bool
+    @EnvironmentObject private var mainViewModel: MainViewModel
     //@Environment(\.dismiss) private var dismiss
     @State var showNoTextHistoryAlert = false
     
@@ -25,7 +25,7 @@ struct TextHistoryView: View{
         
         VStack{
             
-            if !(deafCommunicateModel.statementHistory.isEmpty){
+            if !(mainViewModel.textHistory.isEmpty){
                 
                 Text(textHistoryViewTitle)
                     .font(.title3)
@@ -39,21 +39,22 @@ struct TextHistoryView: View{
                 
                 List(){
                     
-                    ForEach(deafCommunicateModel.statementHistory.reversed(), id:\.self){
+                    ForEach(mainViewModel.textHistory.reversed(), id:\.self){
                         
                         pastStatement in
                         
                         Button(){
                             
-                            deafCommunicateModel.statement = pastStatement
-                            showHistorySheet = false
+                            mainViewModel.text = pastStatement.text
+                            showTextHistory = false
                         }
                         label:{
                             
-                            Text(pastStatement)
+                            Text(pastStatement.text)
                         }
                         
                     }
+                    .onDelete(perform: mainViewModel.deleteTextFromHistory)
                 }
                 .listStyle(DefaultListStyle())
             }
@@ -63,7 +64,7 @@ struct TextHistoryView: View{
             
             Button(action: {
                 
-                showHistorySheet = false
+                showTextHistory = false
                 
             }, label: {
                 
@@ -77,7 +78,7 @@ struct TextHistoryView: View{
         })
         .onAppear{
             
-            if deafCommunicateModel.statementHistory.count == 0{
+            if mainViewModel.textHistory.count == 0{
                 
                 showNoTextHistoryAlert = true
                 

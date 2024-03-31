@@ -5,8 +5,9 @@
   Created by Alex Demerjian on 7/1/22.
   
 */
-"Instruction Message One" = "Aby rozpocząć, dotknij szarego obszaru poniżej & następnie dotknij przycisku mikrofonu na klawiaturze.";
+"Instruction Message One" = "Aby rozpocząć, dotknij przycisku mikrofonu u dołu ekranu.";
 "Copy Button" = "Kopiować";
+"Save To History Button" = "Zapisz w historii";
 "Delete Button" = "Usunąć";
 "Text Copied Notification" = "Skopiowano tekst";
 "Text History View Instructions" = "Stuknij tekst poniżej, aby wyświetlić go ponownie.";

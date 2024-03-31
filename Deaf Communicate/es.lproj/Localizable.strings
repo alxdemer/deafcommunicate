@@ -5,8 +5,9 @@
   Created by Alex Demerjian on 7/1/22.
   
 */
-"Instruction Message One" = "Para empezar, toca la zona gris de abajo y luego toca el botón del micrófono en el teclado.";
+"Instruction Message One" = "Para comenzar, toque el botón del micrófono en la parte inferior de la pantalla.";
 "Copy Button" = "Copiar";
+"Save To History Button" = "Guardar en el historial";
 "Delete Button" = "Borrar";
 "Text Copied Notification" = "Texto Copiado";
 "Text History View Instructions" = "Toca un texto a continuación para mostrarlo de nuevo.";

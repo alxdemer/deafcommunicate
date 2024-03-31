@@ -5,8 +5,9 @@
   Created by Alex Demerjian on 7/1/22.
   
 */
-"Instruction Message One" = "Սկսելու համար հպեք ներքևի մոխրագույն հատվածին և այնուհետև հպեք ստեղնաշարի խոսափողի կոճակին:";
+"Instruction Message One" = "Սկսելու համար հպեք էկրանի ներքևի մասում գտնվող խոսափողի կոճակին:";
 "Copy Button" = "Պատճենել";
+"Save To History Button" = "Պահել պատմության մեջ";
 "Delete Button" = "Ջնջել";
 "Text Copied Notification" = "Տեքստը պատճենված է";
 "Text History View Instructions" = "Հպեք ներքևում գտնվող տեքստին՝ այն նորից ցուցադրելու համար:";

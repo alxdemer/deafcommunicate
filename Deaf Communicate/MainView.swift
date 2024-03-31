@@ -9,13 +9,14 @@ import SwiftUI
 
 struct MainView: View {
     
-    @StateObject public var mainViewModel = MainViewModel()
+    @StateObject public var model = MainViewModel()
     @State private var freshLaunch = true
     @Environment(\.colorScheme) var colorScheme
     @FocusState var textEditorFocused : Bool
     
     //Localized variables (for multi language support)
     let copyButton : LocalizedStringKey = "Copy Button"
+    let saveToTextHistory : LocalizedStringKey = "Save To History Button"
     let deleteButton : LocalizedStringKey = "Delete Button"
     
     var body: some View {
@@ -30,18 +31,18 @@ struct MainView: View {
                     
                     VStack{
                         
-                        Text(mainViewModel.statement == "" ? mainViewModel.instructionMessageOne : "")
+                        Text(model.text == "" ? model.instructionMessageOne : "")
                             .font(.system(size:18))
                             .padding([.top, .bottom])
                             .multilineTextAlignment(.center)
                         
                         ScrollView{
                             
-                            TextEditor(text: $mainViewModel.statement)
+                            TextEditor(text: $model.text)
                                 .focused($textEditorFocused)
-                                .font(Font.custom(mainViewModel.fontStyle, size:mainViewModel.fontSize))
+                                .font(Font.custom(model.fontStyle, size:model.fontSize))
                                 .autocorrectionDisabled(true)
-                                .foregroundColor(mainViewModel.isCustomFontColor == false ? colorScheme == .dark ? Color.white : Color.black : mainViewModel.fontColor)
+                                .foregroundColor(model.isCustomFontColor == false ? colorScheme == .dark ? Color.white : Color.black : model.fontColor)
                                 .frame(height: textEditorFocused == true ? geometry.size.height*0.8 : geometry.size.height*0.85)
                                 .scrollContentBackground(.hidden)
                                 .background(.gray.opacity(0.3))
@@ -49,6 +50,19 @@ struct MainView: View {
                             
                         }
                         .scrollDismissesKeyboard(.interactively)
+                        
+                        if textEditorFocused == false{
+                            
+                            Button{
+                                model.isRecording ? model.stopRecording() : model.startRecording()
+                            }label:{
+                                Image(model.isRecording ? "MicOnIcon" : "MicOffIcon")
+                                    .resizable()
+                                    .frame(width: 100, height: 100)
+                                
+                            }
+                            
+                        }
                         
                     }
                     .toolbar{
@@ -58,21 +72,27 @@ struct MainView: View {
                             Menu{
                                 
                                 Button{
-                                    
-                                    mainViewModel.copyTextToClipboard()
-                                    
+                                    model.copyTextToClipboard()
                                 }label:{
-                                    
                                     Label(copyButton, systemImage: "doc.on.doc")
                                 }
                                 
+                                Button{
+                                    model.saveTextToHistory()
+                                } label:{
+                                    Label(saveToTextHistory, systemImage: "square.and.arrow.down")
+                                }
                                 
-                                Button(role: .destructive, action: {mainViewModel.deleteText()}){
+                                Button(role: .destructive){
+                                    model.deleteText()
+                                } label:{
                                     Label(deleteButton, systemImage: "trash")
                                 }
                                 
                             }label:{
-                                Label("Text Actions", systemImage: "ellipsis.circle")
+                                Image("AdditionalOptionsIcon")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
                             }
                             
                         }
@@ -80,25 +100,29 @@ struct MainView: View {
                         ToolbarItem(placement: .topBarLeading){
                             
                             Button{
-                                
-                                DispatchQueue.main.async{
-                                    mainViewModel.showHistorySheet = true
+                                Task.init(priority: .userInitiated){
+                                    model.showTextHistory = true
                                 }
-                                
                             }label:{
-                                Label("", systemImage: "clock.arrow.circlepath")
+                                Image("TextHistoryIcon")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
                             }
                         }
                         
                         ToolbarItem(placement: .topBarTrailing){
-                            NavigationLink(destination: SettingsView().environmentObject(mainViewModel)){
-                                Image(systemName: "gear")
+                            NavigationLink(destination: SettingsView().environmentObject(model)){
+                                Image("SettingsIcon")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
                             }
                         }
                         
                         ToolbarItem(placement: .topBarTrailing){
                             NavigationLink(destination: FeedbackView()){
-                                Image(systemName: "exclamationmark.bubble")
+                                Image("FeedbackIcon")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
                             }
                         }
                         
@@ -107,19 +131,21 @@ struct MainView: View {
                 }
                 .onAppear(){
                     if freshLaunch{
-                        mainViewModel.configureUserDefaults()
+                        model.configureUserDefaults()
                         freshLaunch = false
                     }
+                    
+                    model.requestPermission()
                 }
                 
-                if let notificationSymbol = mainViewModel.notificationSymbol, let notificationText = mainViewModel.notificationText, mainViewModel.showNotification{
+                if let notificationSymbol = model.notificationSymbol, let notificationText = model.notificationText, model.showNotification{
                     NotificationView(symbol: notificationSymbol, text: notificationText)
                 }
                 
             }
-            .sheet(isPresented: $mainViewModel.showHistorySheet, onDismiss: {}, content: {
+            .sheet(isPresented: $model.showTextHistory, onDismiss: {}, content: {
                 
-                TextHistoryView(showHistorySheet: $mainViewModel.showHistorySheet).environmentObject(mainViewModel)
+                TextHistoryView(showTextHistory: $model.showTextHistory).environmentObject(model)
                 
             })
             

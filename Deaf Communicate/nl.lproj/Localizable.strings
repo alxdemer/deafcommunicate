@@ -5,8 +5,9 @@
   Created by Alex Demerjian on 7/1/22.
   
 */
-"Instruction Message One" = "Om te beginnen tikt u op het grijze vlak hieronder en vervolgens op de microfoonknop op het toetsenbord.";
+"Instruction Message One" = "Tik om te beginnen op de microfoonknop onder aan het scherm.";
 "Copy Button" = "Kopiëren";
+"Save To History Button" = "Opslaan in geschiedenis";
 "Delete Button" = "Verwijderen";
 "Text Copied Notification" = "Tekst Gekopieerd";
 "Text History View Instructions" = "Tik hieronder op een tekst om deze opnieuw weer te geven.";

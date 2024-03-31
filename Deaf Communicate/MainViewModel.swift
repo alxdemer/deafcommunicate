@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Speech
 
 class MainViewModel: ObservableObject{
     
@@ -14,8 +15,11 @@ class MainViewModel: ObservableObject{
     let textCopiedNotification: LocalizedStringKey = "Text Copied Notification"
     let instructionMessageOne:LocalizedStringKey = "Instruction Message One"
     
-    @Published var statement = ""
-    @Published var statementHistory: [String] = []
+    private let audioEngine = AVAudioEngine()
+    private let speechRecognizer = SFSpeechRecognizer(locale: Locale.current)
+    @Published var isRecording = false
+    @Published var text = ""
+    @Published var textHistory: [TextHistoryContainer] = []
     @Published var noPastStatements = true
     @Published var fontSize: Double = 50.0
     @Published var fontStyle: String = "SF Pro Regular"
@@ -24,7 +28,59 @@ class MainViewModel: ObservableObject{
     @Published var showNotification = false
     @Published var notificationText: LocalizedStringKey? = nil
     @Published var notificationSymbol: String? = nil
-    @Published var showHistorySheet: Bool = false
+    @Published var showTextHistory: Bool = false
+    @Published var settingsIcon = Image("Settings-Not-Tapped")
+    
+    func requestPermission(){
+        SFSpeechRecognizer.requestAuthorization { authStatus in
+            switch authStatus {
+            case .authorized:
+                break // Good to go
+            default:
+                print("Speech recognition authorization denied")
+            }
+        }
+    }
+    
+    func startRecording() {
+        
+        // Ensure recognizer is available for the device's locale
+        let recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
+        let inputNode = audioEngine.inputNode
+        
+        guard let speechRecognizer = speechRecognizer else {return}
+        guard speechRecognizer.isAvailable == true else {return}
+        
+        // Setup recognition request
+        recognitionRequest.shouldReportPartialResults = true
+        speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
+            if let result = result {
+                // Update the UI with the results
+                self.text = result.bestTranscription.formattedString
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+        
+        // Prepare and start recording
+        let recordingFormat = inputNode.outputFormat(forBus: 0)
+        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
+            recognitionRequest.append(buffer)
+        }
+        audioEngine.prepare()
+        do {
+            try audioEngine.start()
+            isRecording = true
+        } catch {
+            print("Audio engine failed to start")
+        }
+    }
+    
+    func stopRecording(){
+        audioEngine.stop()
+        audioEngine.inputNode.removeTap(onBus: 0)
+        isRecording = false
+    }
     
     func configureUserDefaults(){
         
@@ -57,7 +113,7 @@ class MainViewModel: ObservableObject{
     
     func copyTextToClipboard(){
         
-        UIPasteboard.general.string = statement
+        UIPasteboard.general.string = text
         
         DispatchQueue.main.async{
             self.notificationText = self.textCopiedNotification
@@ -80,16 +136,34 @@ class MainViewModel: ObservableObject{
     }
     
     func deleteText(){
+        text=""
+    }
+    
+    func saveTextToHistory(){
         
-        if (statement != ""){
-            statementHistory.append(statement)
+        if (text != ""){
+            textHistory.append(TextHistoryContainer(text: text))
             
             if noPastStatements {
                 noPastStatements = false
             }
         }
         
-        statement=""
+        text=""
+        
+    }
+    
+    
+    func deleteTextFromHistory(at offsets: IndexSet){
+        textHistory.remove(atOffsets: offsets)
+        
+        if textHistory.count == 0{
+            Task(priority: .userInitiated){
+                await MainActor.run{
+                    showTextHistory = false
+                }
+            }
+        }
     }
     
 }

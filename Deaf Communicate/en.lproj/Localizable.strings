@@ -5,8 +5,9 @@
   Created by Alex Demerjian on 7/1/22.
   
 */
-"Instruction Message One" = "To begin, tap the grey area below & then tap the microphone button on the keyboard.";
+"Instruction Message One" = "To begin, tap the microphone button at the bottom of the screen.";
 "Copy Button" = "Copy";
+"Save To History Button" = "Save To History";
 "Delete Button" = "Delete";
 "Text Copied Notification" = "Text Copied";
 "Text History View Instructions" = "Tap a text below to show it again.";

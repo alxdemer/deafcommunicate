@@ -5,8 +5,9 @@
   Created by Alex Demerjian on 7/1/22.
   
 */
-"Instruction Message One" = "開始するには、下の灰色の領域をタップしてから、キーボードのマイクボタンをタップします。";
+"Instruction Message One" = "まず、画面下部のマイクボタンをタップします。";
 "Copy Button" = "写し";
+"Save To History Button" = "履歴に保存";
 "Delete Button" = "削除";
 "Text Copied Notification" = "テキストをコピー";
 "Text History View Instructions" = "下のテキストをタップすると、もう一度表示されます。";

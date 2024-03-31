@@ -5,8 +5,9 @@
   Created by Alex Demerjian on 7/1/22.
   
 */
-"Instruction Message One" = "Για να ξεκινήσετε, πατήστε την γκρι περιοχή παρακάτω και, στη συνέχεια, πατήστε το κουμπί μικροφώνου στο πληκτρολόγιο.";
+"Instruction Message One" = "Για να ξεκινήσετε, πατήστε το κουμπί μικροφώνου στο κάτω μέρος της οθόνης.";
 "Copy Button" = "Αντίγραφο";
+"Save To History Button" = "Αποθήκευση στο ιστορικό";
 "Delete Button" = "Διαγράφω";
 "Text Copied Notification" = "Το κείμενο αντιγράφηκε";
 "Text History View Instructions" = "Πατήστε ένα κείμενο παρακάτω για να το εμφανίσετε ξανά.";

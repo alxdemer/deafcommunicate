@@ -11,13 +11,14 @@ struct NotificationView: View {
     
     public var symbol: String
     public var text: LocalizedStringKey
+    @Environment(\.colorScheme) var appearance
     
     var body: some View {
         
         ZStack{
             Rectangle()
                 .frame(width:150, height:100)
-                .foregroundColor(.white)
+                .foregroundColor(appearance == .light ? .white:.black)
                 .backgroundStyle(.thinMaterial)
                 .cornerRadius(8)
             VStack{
