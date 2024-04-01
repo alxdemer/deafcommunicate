@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		210FCDA02AB384AD00419C53 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210FCD9F2AB384AD00419C53 /* MainView.swift */; };
-		2144339C2BB90C4900AED287 /* TextHistoryContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2144339B2BB90C4900AED287 /* TextHistoryContainer.swift */; };
 		215242AC2AABDBB100957175 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215242AB2AABDBB100957175 /* NotificationView.swift */; };
 		215BAF3E2AAAC5E200D206BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 215BAF3D2AAAC5E200D206BD /* LaunchScreen.storyboard */; };
+		2184689D2BBA492B0094DB80 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184689C2BBA492B0094DB80 /* Extensions.swift */; };
 		6D1A145B2A48AA0400DC0BF7 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1A145A2A48AA0400DC0BF7 /* MainViewModel.swift */; };
 		6D75059329EDD4690032A710 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D75059229EDD4690032A710 /* Assets.xcassets */; };
 		6D75059629EDD4690032A710 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D75059529EDD4690032A710 /* Preview Assets.xcassets */; };
@@ -23,12 +23,12 @@
 
 /* Begin PBXFileReference section */
 		210FCD9F2AB384AD00419C53 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		2144339B2BB90C4900AED287 /* TextHistoryContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHistoryContainer.swift; sourceTree = "<group>"; };
 		215242A82AAB9B6A00957175 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		215242A92AAB9EDF00957175 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		215242AA2AABBC0F00957175 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
 		215242AB2AABDBB100957175 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		215BAF3D2AAAC5E200D206BD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2184689C2BBA492B0094DB80 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6D1A145A2A48AA0400DC0BF7 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		6D75058B29EDD4680032A710 /* Deaf Communicate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Deaf Communicate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D75059229EDD4690032A710 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +61,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		218468982BBA347D0094DB80 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				210FCD9F2AB384AD00419C53 /* MainView.swift */,
+				6D1A145A2A48AA0400DC0BF7 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		218468992BBA34820094DB80 /* Supporting Views */ = {
+			isa = PBXGroup;
+			children = (
+				6D7505A029EDD68D0032A710 /* TextHistoryView.swift */,
+				215242AB2AABDBB100957175 /* NotificationView.swift */,
+				6D7505A629EDD68D0032A710 /* FeedbackView.swift */,
+				6D7505A229EDD68D0032A710 /* SettingsView.swift */,
+				215BAF3D2AAAC5E200D206BD /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Views";
+			sourceTree = "<group>";
+		};
+		2184689F2BBA4C0F0094DB80 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2184689C2BBA492B0094DB80 /* Extensions.swift */,
+				6D75059229EDD4690032A710 /* Assets.xcassets */,
+				6D7505B029EDD87D0032A710 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		6D75058229EDD4680032A710 = {
 			isa = PBXGroup;
 			children = (
@@ -80,17 +111,10 @@
 		6D75058D29EDD4680032A710 /* Deaf Communicate */ = {
 			isa = PBXGroup;
 			children = (
-				215242AB2AABDBB100957175 /* NotificationView.swift */,
-				6D7505A629EDD68D0032A710 /* FeedbackView.swift */,
-				6D7505A029EDD68D0032A710 /* TextHistoryView.swift */,
-				6D7505A229EDD68D0032A710 /* SettingsView.swift */,
-				210FCD9F2AB384AD00419C53 /* MainView.swift */,
-				6D1A145A2A48AA0400DC0BF7 /* MainViewModel.swift */,
 				6D75059E29EDD5B10032A710 /* DeafCommunicateApp.swift */,
-				2144339B2BB90C4900AED287 /* TextHistoryContainer.swift */,
-				215BAF3D2AAAC5E200D206BD /* LaunchScreen.storyboard */,
-				6D75059229EDD4690032A710 /* Assets.xcassets */,
-				6D7505B029EDD87D0032A710 /* Localizable.strings */,
+				218468982BBA347D0094DB80 /* Main */,
+				218468992BBA34820094DB80 /* Supporting Views */,
+				2184689F2BBA4C0F0094DB80 /* Resources */,
 				6D75059429EDD4690032A710 /* Preview Content */,
 			);
 			path = "Deaf Communicate";
@@ -189,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2184689D2BBA492B0094DB80 /* Extensions.swift in Sources */,
 				6D7505A729EDD68D0032A710 /* TextHistoryView.swift in Sources */,
 				210FCDA02AB384AD00419C53 /* MainView.swift in Sources */,
 				6D7505A929EDD68D0032A710 /* SettingsView.swift in Sources */,
@@ -196,7 +221,6 @@
 				6D75059F29EDD5B10032A710 /* DeafCommunicateApp.swift in Sources */,
 				6D7505AD29EDD68D0032A710 /* FeedbackView.swift in Sources */,
 				215242AC2AABDBB100957175 /* NotificationView.swift in Sources */,
-				2144339C2BB90C4900AED287 /* TextHistoryContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +398,10 @@
 				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "DeafCom.Deaf-Communicator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -409,6 +437,10 @@
 				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "DeafCom.Deaf-Communicator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
